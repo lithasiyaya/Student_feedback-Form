@@ -1,0 +1,48 @@
+/* ── Star Rating ── */
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #d1d5db;
+  line-height: 1;
+  padding: 0.1rem;
+  transition: color 0.15s ease, transform 0.15s ease;
+  border-radius: 4px;
+}
+
+.star-btn:hover:not(:disabled),
+.star-btn:focus-visible:not(:disabled) {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.star-btn--active {
+  color: #f59e0b;
+}
+
+.star-btn:hover:not(:disabled) {
+  transform: scale(1.15);
+}
+
+.star-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.star-label {
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand);
+  background: var(--brand-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
